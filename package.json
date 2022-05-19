@@ -1,0 +1,31 @@
+{
+  "name": "agenda",
+  "version": "1.0.0",
+  "description": "propuesta de agenda para la aplicación de consultas medicas",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve",
+    "dev": "parcel src/index.html",
+    
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "author": "Samuel Dario",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "parcel": "^2.5.0",
+    "prettier": "^2.6.2"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
