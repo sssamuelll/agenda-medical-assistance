@@ -511,10 +511,17 @@ button, a {
   order: 1;
 }
 .project-boxes.jsListView .project-box-footer {
+  width: 140px;
   order: 4;
   padding-top: 0;
   flex-direction: row;
   justify-content: flex-start;
+}
+.project-boxes.jsListView .project-box-footer p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
 }
 .project-boxes.jsListView .project-box-footer:after {
   display: none;

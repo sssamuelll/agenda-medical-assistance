@@ -562,10 +562,18 @@ button, a {
     }
     
     .project-box-footer {
+      width: 140px;
       order: 4;
       padding-top: 0;
       flex-direction: row;
       justify-content: flex-start;
+    }
+
+    .project-box-footer p{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: left;
+      white-space: nowrap;
     }
     
     .project-box-footer:after {
@@ -577,7 +585,7 @@ button, a {
     }
     
     .project-box-content-header p {
-    
+ 
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: left;
