@@ -285,7 +285,10 @@ button, a {
   margin: 0;
   color: var(--main-color);
 }
-.projects-section-header .time {
+.projects-section-header .calendar-day {
+  display: flex;
+}
+.projects-section-header .calendar-day p {
   font-size: 20px;
 }
 
@@ -328,7 +331,6 @@ button, a {
   background-color: transparent;
   border: none;
   color: var(--main-color);
-  margin-left: 8px;
   transition: 0.2s;
 }
 .view-btn.active {
@@ -338,6 +340,23 @@ button, a {
 .view-btn:not(.active):hover {
   background-color: var(--link-color-hover);
   color: var(--link-color-active);
+}
+
+.list-titles {
+  display: flex;
+}
+.list-titles p {
+  color: var(--main-color);
+}
+.list-titles .time-title {
+  margin-right: 50px;
+  margin-left: 6px;
+}
+.list-titles .status-title {
+  margin-right: 37px;
+}
+.list-titles .patient-title {
+  margin-right: 72px;
 }
 
 .messages-section {
@@ -453,19 +472,22 @@ button, a {
 }
 
 .project-boxes {
-  margin: 0 -8px;
+  margin: 0 -8px 20px;
   overflow-y: auto;
 }
 .project-boxes.jsGridView {
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 .project-boxes.jsGridView .project-box-wrapper {
   width: 33.3%;
 }
+.project-boxes.jsListView {
+  border-radius: 10px;
+}
 .project-boxes.jsListView .project-box {
   display: flex;
-  border-radius: 10px;
   position: relative;
 }
 .project-boxes.jsListView .project-box > * {
@@ -476,17 +498,22 @@ button, a {
   right: 16px;
   top: 16px;
 }
+.project-boxes.jsListView .project-box-content-status {
+  order: 2;
+  width: 60px;
+}
 .project-boxes.jsListView .project-box-content-header {
-  order: 1;
-  max-width: 120px;
+  order: 3;
+  width: 100px;
 }
 .project-boxes.jsListView .project-box-header {
-  order: 2;
+  width: 60px;
+  order: 1;
 }
 .project-boxes.jsListView .project-box-footer {
-  order: 3;
+  order: 4;
   padding-top: 0;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
 .project-boxes.jsListView .project-box-footer:after {
@@ -496,16 +523,15 @@ button, a {
   margin-bottom: 8px;
 }
 .project-boxes.jsListView .project-box-content-header p {
-  text-align: left;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
 }
 .project-boxes.jsListView .project-box-header > span {
-  position: absolute;
+  white-space: nowrap;
   bottom: 16px;
   left: 16px;
-  font-size: 12px;
 }
 .project-boxes.jsListView .box-progress-wrapper {
   order: 3;
@@ -514,15 +540,13 @@ button, a {
 
 .project-box {
   --main-color-card: #dbf6fd;
-  border-radius: 30px;
-  padding: 16px;
+  padding: 2px 16px;
   background-color: var(--main-color-card);
 }
 .project-box-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
   color: var(--main-color);
 }
 .project-box-header span {
@@ -533,10 +557,6 @@ button, a {
 }
 .project-box-content-header {
   text-align: center;
-  margin-bottom: 16px;
-}
-.project-box-content-header p {
-  margin: 0;
 }
 .project-box-content-header img {
   object-fit: cover;
@@ -545,7 +565,6 @@ button, a {
   border-radius: 50%;
 }
 .project-box-wrapper {
-  padding: 8px;
   transition: 0.2s;
 }
 
@@ -579,7 +598,7 @@ button, a {
 }
 
 .box-content-header {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 700;
   opacity: 0.7;

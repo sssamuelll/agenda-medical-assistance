@@ -80,7 +80,20 @@
       <div class="projects-section">
         <div class="projects-section-header">
           <p>Patient's Schedule</p>
-          <p class="time">May, 19</p>
+
+          <div class="calendar-day">
+            <button class="view-btn previous-day" title="Previous Day">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>                             
+            </button>
+            <p class="time">May, 19</p>
+            <button class="view-btn next-btn" title="Next Day">                            
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>                            
+            </button>            
+          </div>
         </div>
         <div class="projects-section-line">
           <div class="projects-status">
@@ -100,29 +113,20 @@
             </div>
           </div>
           <div class="view-actions">
-            <button class="view-btn list-view" title="List View">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
-                <line x1="8" y1="6" x2="21" y2="6" />
-                <line x1="8" y1="12" x2="21" y2="12" />
-                <line x1="8" y1="18" x2="21" y2="18" />
-                <line x1="3" y1="6" x2="3.01" y2="6" />
-                <line x1="3" y1="12" x2="3.01" y2="12" />
-                <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
-            </button>
-            <button class="view-btn grid-view active" title="Grid View">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" /></svg>
-            </button>
+            
           </div>
         </div>
-        <div class="project-boxes jsGridView">
+        <div class="list-titles">
+          <p class="time-title">Time</p>
+          <p class="status-title">Status</p>
+          <p class="patient-title">Patient</p>
+          <p class="reason-title">Reason</p>
+        </div>
+        <div class="project-boxes jsListView">
           <div class="project-box-wrapper">
-            <div class="project-box" style="background-color: #fee4cb;">
+            <div class="project-box" style="background-color: #ffd3e2;">
               <div class="project-box-header">
-                <span>May 19, 2022</span>
+                <span>10:00 AM</span>
                 <div class="more-wrapper">
                   <button class="project-btn-more">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
@@ -130,135 +134,56 @@
                       <circle cx="12" cy="5" r="1" />
                       <circle cx="12" cy="19" r="1" /></svg>
                   </button>
+                </div>
+              </div>
+              <div class="project-box-content-status">
+                <p class="box-content-subheader">
+                  Canceled
+                </p>
+              </div>
+              <div class="project-box-content-header">
+                <!--<img src="https://images.unsplash.com/photo-1562457753-6867bda028cd?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=866" alt="profile image">-->
+                <p class="box-content-header">Braidy Darin</p>
+              </div>
+              <div class="project-box-footer">
+                <p class="box-content-subheader">Annual checkup</p>
+              </div>
             </div>
           </div>
-          <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1562457753-6867bda028cd?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=866" alt="profile image">
-            <p class="box-content-header">Braidy Darin</p>
-            <p class="box-content-subheader">Annual checkup</p>
-          </div>
-          
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #ff942e;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #ff942e;">
-              Join Room
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-box-wrapper">
-        <div class="project-box" style="background-color: #e9e7fd;">
-          <div class="project-box-header">
-            <span>May 19, 2022</span>
-            <div class="more-wrapper">
-              <button class="project-btn-more">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                  <circle cx="12" cy="12" r="1" />
-                  <circle cx="12" cy="5" r="1" />
-                  <circle cx="12" cy="19" r="1" /></svg>
-              </button>
-            </div>
-          </div>
-          <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1543430720-fa600c67e423?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917" alt="profile image">
+          <div class="project-box-wrapper">
+            <div class="project-box" style="background-color: #ffd3e2;">
+              <div class="project-box-header">
+                <span>10:30 AM</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                      <circle cx="12" cy="12" r="1" />
+                      <circle cx="12" cy="5" r="1" />
+                      <circle cx="12" cy="19" r="1" /></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-status">
+                <p class="box-content-subheader">
+                  Canceled
+                </p>
+              </div>
+            <div class="project-box-content-header">
+            <!--<img src="https://images.unsplash.com/photo-1543430720-fa600c67e423?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917" alt="profile image">-->
             <p class="box-content-header">Charmaine Quin</p>
+            
+          </div>
+          <div class="project-box-footer">
             <p class="box-content-subheader">Pelvic Pain</p>
           </div>
           
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #4f3ff0;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #4f3ff0;">
-              Join Room
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-box-wrapper">
-        <div class="project-box">
-          <div class="project-box-header">
-            <span>May 19, 2022</span>
-            <div class="more-wrapper">
-              <button class="project-btn-more">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                  <circle cx="12" cy="12" r="1" />
-                  <circle cx="12" cy="5" r="1" />
-                  <circle cx="12" cy="19" r="1" /></svg>
-              </button>
-            </div>
-          </div>
-          <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1514425623522-e08e404b4a03?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873" alt="profile image">
-            <p class="box-content-header">Taide Giusy</p>
-            <p class="box-content-subheader">Routine physical examination</p>
-          </div>
           
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #096c86;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #096c86;">
-              Join Room
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-box-wrapper">
-        <div class="project-box" style="background-color: #ffd3e2;">
-          <div class="project-box-header">
-            <span>May 19, 2022</span>
-            <div class="more-wrapper">
-              <button class="project-btn-more">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                  <circle cx="12" cy="12" r="1" />
-                  <circle cx="12" cy="5" r="1" />
-                  <circle cx="12" cy="19" r="1" /></svg>
-              </button>
-            </div>
-          </div>
-          <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1533101585792-27f81a845550?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387" alt="profile image">
-            <p class="box-content-header">José Manuel Anastasio</p>
-            <p class="box-content-subheader">Abdominal Pain</p>
-          </div>
-          
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #df3670;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #df3670;">
-              Join Room
-            </div>
-          </div>
         </div>
       </div>
       <div class="project-box-wrapper">
         <div class="project-box" style="background-color: #c8f7dc;">
           <div class="project-box-header">
-            <span>May 19, 2022</span>
+            <span>11:00 AM</span>
             <div class="more-wrapper">
               <button class="project-btn-more">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
@@ -268,31 +193,87 @@
               </button>
             </div>
           </div>
+          <div class="project-box-content-status">
+            <p class="box-content-subheader">
+              Complete
+            </p>
+          </div>
           <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871" alt="profile image">
+            <!--<img src="https://images.unsplash.com/photo-1514425623522-e08e404b4a03?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873" alt="profile image">-->
+            <p class="box-content-header">Taide Giusy</p>
+            
+          </div>
+          <div class="project-box-footer">
+            <p class="box-content-subheader">Routine physical examination</p>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="project-box-wrapper">
+        <div class="project-box" style="background-color: #c8f7dc;">
+          <div class="project-box-header">
+            <span>11:30 AM</span>
+            <div class="more-wrapper">
+              <button class="project-btn-more">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-box-content-status">
+            <p class="box-content-subheader">
+              Complete
+            </p>
+          </div>
+          <div class="project-box-content-header">
+            <!--<img src="https://images.unsplash.com/photo-1533101585792-27f81a845550?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387" alt="profile image">-->
+            <p class="box-content-header">José Manuel Anastasio</p>
+            
+          </div>
+          <div class="project-box-footer">
+            <p class="box-content-subheader">Abdominal Pain</p>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="project-box-wrapper">
+        <div class="project-box" style="background-color: #c8f7dc;">
+          <div class="project-box-header">
+            <span>2:00 PM</span>
+            <div class="more-wrapper">
+              <button class="project-btn-more">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-box-content-status">
+            <p class="box-content-subheader">
+              Complete
+            </p>
+          </div>
+          <div class="project-box-content-header">
+            <!--<img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871" alt="profile image">-->
             <p class="box-content-header">Sorrel Tricia</p>
+            
+          </div>
+          <div class="project-box-footer">
             <p class="box-content-subheader">Dizziness and Vertigo</p>
           </div>
           
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #34c471;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #34c471;">
-              Join Room
-            </div>
-          </div>
+          
         </div>
       </div>
       <div class="project-box-wrapper">
         <div class="project-box" style="background-color: #d5deff;">
           <div class="project-box-header">
-            <span>May 19, 2022</span>
+            <span>2:30 PM</span>
             <div class="more-wrapper">
               <button class="project-btn-more">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
@@ -302,25 +283,21 @@
               </button>
             </div>
           </div>
+          <div class="project-box-content-status">
+            <p class="box-content-subheader">
+              Check In
+            </p>
+          </div>
           <div class="project-box-content-header">
-            <img src="https://images.unsplash.com/photo-1618951871701-f542cd0d877e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774" alt="profile image">
+            <!--<img src="https://images.unsplash.com/photo-1618951871701-f542cd0d877e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774" alt="profile image">-->
             <p class="box-content-header">Orietta Lucile</p>
+            
+          </div>
+          <div class="project-box-footer">
             <p class="box-content-subheader">Fever</p>
           </div>
           
-          <div class="project-box-footer">
-            <div class="participants">
-              
-              <button class="add-participant" style="color: #4067f9;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-            <div class="days-left" style="color: #4067f9;" onclick="">
-              Join Room
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

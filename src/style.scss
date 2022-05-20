@@ -298,8 +298,11 @@ button, a {
       color: var(--main-color);
     }
     
-    .time {
-      font-size: 20px;
+    .calendar-day {
+      display:flex;
+      p {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -346,7 +349,7 @@ button, a {
   background-color: transparent;
   border: none;
   color: var(--main-color);
-  margin-left: 8px;
+  
   transition: .2s;
   
   &.active {
@@ -358,6 +361,28 @@ button, a {
     background-color:  var(--link-color-hover);
     color: var(--link-color-active);
   }
+}
+
+.list-titles{
+  display:flex;
+
+  p{
+    color: var(--main-color);
+  }
+
+  .time-title{
+    margin-right: 50px;
+    margin-left: 6px;
+  }
+
+  .status-title{
+    margin-right: 37px;
+  }
+
+  .patient-title{
+    margin-right: 72px;
+  }
+
 }
 
 
@@ -490,10 +515,11 @@ button, a {
 }
 
 .project-boxes {
-  margin: 0 -8px;
+  margin: 0 -8px 20px;
   overflow-y: auto;
   
   &.jsGridView {
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     
@@ -503,9 +529,10 @@ button, a {
   }
   
   &.jsListView {
+    border-radius: 10px;
     .project-box {
       display: flex;
-      border-radius: 10px;
+      
       position: relative;
       > * {
         margin-right: 24px;
@@ -517,21 +544,27 @@ button, a {
       right: 16px;
       top: 16px;
     }
+
+    .project-box-content-status{
+      order:2;
+      width: 60px;
+    }
     
     .project-box-content-header {
-      order: 1;
-      max-width: 120px;
+      order: 3;
+      width: 100px;
       
     }
     
     .project-box-header {
-      order: 2;
+      width:60px;
+      order: 1;
     }
     
     .project-box-footer {
-      order: 3;
+      order: 4;
       padding-top: 0;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start;
     }
     
@@ -544,17 +577,18 @@ button, a {
     }
     
     .project-box-content-header p {
-      text-align: left;
-      overflow: hidden;
-      white-space: nowrap;
+    
       text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: left;
+      white-space: nowrap;
     }
     
     .project-box-header > span {
-      position: absolute;
+      white-space: nowrap;
       bottom: 16px;
       left: 16px;
-      font-size: 12px;
+      
     }
     
     .box-progress-wrapper {
@@ -566,15 +600,15 @@ button, a {
 
 .project-box {
   --main-color-card: #dbf6fd;
-  border-radius: 30px;
-  padding: 16px;
+  
+  padding: 2px 16px;
   background-color: var(--main-color-card);
   
   &-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+
     color: var(--main-color);
     
     span {
@@ -587,9 +621,9 @@ button, a {
   
   &-content-header {
     text-align: center;
-    margin-bottom: 16px;
     
-    p { margin: 0; };
+    
+    
     img {
       object-fit: cover;
       width: 60px;
@@ -599,7 +633,6 @@ button, a {
   }
   
   &-wrapper {
-    padding: 8px;
     transition: .2s;
   }
 }
@@ -635,7 +668,7 @@ button, a {
 }
 
 .box-content-header {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 700;
   opacity: .7;
@@ -668,9 +701,7 @@ button, a {
     margin: 0;
   }
   
-  &-wrapper {
-    
-  }
+  
   
   &-percentage {
     text-align: right;
