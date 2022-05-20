@@ -790,6 +790,8 @@ button, a {
 }
 
 @media screen and (max-width: 720px) {
+
+
   .app-name, .profile-btn span { display: none; }
   
   .add-btn, .notification-btn, .mode-switch {
@@ -799,6 +801,10 @@ button, a {
     svg {
       width: 16px;
       height: 16px;
+    }
+
+    .moon {
+      transform: scale(0.75); // 75% of original size
     }
   }
   
