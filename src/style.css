@@ -739,9 +739,6 @@ button, a {
     width: 16px;
     height: 16px;
   }
-  .add-btn .moon, .notification-btn .moon, .mode-switch .moon {
-    transform: scale(0.75);
-  }
 
   .app-header-right button {
     margin-left: 4px;
